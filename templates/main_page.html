@@ -12,33 +12,35 @@
   </head>
   <body>
     <div id="banner" class="container">
-      <h1 class="display-4">Hello, world!</h1>
+      <h1 class="display-4">Hello, adventurer!</h1>
     </div>
     <div class="container">
       <form action="{{ url_for('process_inputs') }}" method="post">
         <div class="form-group">
-          <label for="input_name">First Name</label>
-          <input type="text" class="form-control" name="input_name"  id="input_name" placeholder="Fred Flintstone">
+          <label for="input_name">What is your name, young one?</label>
+          <input type="text" class="form-control" name="input_name"  id="input_name" placeholder="Charles Buckley">
         </div>
         <div class="form-group">
-          <label for="input_dropdown">Example select</label>
+          <label for="input_dropdown">What class shall you be?</label>
           <select class="form-control" name="input_dropdown" id="input_dropdown">
-            <option>1 fish</option>
-            <option>2 fish</option>
-            <option>red fish</option>
-            <option>the spanish inquisition</option>
-            <option>blue fish</option>
+            <option>Mage</option>
+            <option>Assasin</option>
+            <option>Barbarian</option>
+            <option>Warrior</option>
+            <option>Knight</option>
+            <option>Rogue</option>
+            <option>Noble</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="input_select">Example multiple select</label>
-          <select multiple class="form-control" name="input_select" id="input_select">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
+          <label for="input_dropdown">What homeland do you venture from? </label>
+          <input type="text" class="form-control" name="input_dropdown" id="input_dropdown" placeholder="Riften">
+        </div>
+        <div class="form-group">
+            <label for="input_dropdown">What weapon are you most proficient in?</label>
+            <select class="form-control" name="input_select" id="input_select">
+                <option></option>
+            </select>
         </div>
         <div class="form-group">
           <label for="input_freeform">Example textarea</label>

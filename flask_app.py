@@ -1,5 +1,19 @@
 from flask import Flask, request, render_template
 app = Flask(__name__)
+#STUFF FOR MY WEBSITE
+#Add categories for different types of video game videos
+#Grab videos from Youtube that relate to the category and the game
+#Show the thumbnail for the videos
+#Show picture for game on button that leads to game's video categories
+
+#STUFF FOR FORMINPUTS
+#Take someone's name and replace it with more complicated name
+#Choose a class
+#Choose homeland
+#Choose weapon proficiancy
+#Choose familiar
+#Choose adventure
+#print all inputs in a text
 
 @app.route('/', methods=['GET'])
 def main():
@@ -12,5 +26,8 @@ def process_inputs():
     dropdown = request.form.get('input_dropdown', '')
     select = request.form.get('input_select', '')
     freeform = request.form.get('input_freeform', '')
+    if name is "":
+         return render_template("main_page.html", input_data=dropdown,
+                           output="What's the big idea? You gotta name don't you?")
     return render_template("main_page.html", input_data=dropdown,
                            output="You're a wizard %s." % name)
