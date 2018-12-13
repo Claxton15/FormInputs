@@ -21,10 +21,10 @@
           <input type="text" class="form-control" name="input_name"  id="input_name" placeholder="Charles Buckley">
         </div>
         <div class="form-group">
-          <label for="input_dropdown">What is your role?</label>
-          <select class="form-control" name="input_dropdown" id="input_dropdown">
+          <label for="input_role">What is your role?</label>
+          <select class="form-control" name="input_role" id="input_role">
             <option>Mage</option>
-            <option>Assasin</option>
+            <option>Assassin</option>
             <option>Barbarian</option>
             <option>Warrior</option>
             <option>Knight</option>
@@ -33,28 +33,28 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="input_dropdown">What homeland do you venture from? </label>
-          <input type="text" class="form-control" name="input_dropdown" id="input_dropdown" placeholder="Riften">
+          <label for="input_homeland">What homeland do you venture from? </label>
+          <input type="text" class="form-control" name="input_homeland" id="input_homeland" placeholder="Riften">
         </div>
         <div class="form-group">
-            <label for="input_dropdown">What weapon are you most proficient in?</label>
-            <select class="form-control" name="input_select" id="input_select">
-                <option>The heroic and classic sword</option>
+            <label for="input_weapon">What weapon are you most proficient in?</label>
+            <select class="form-control" name="input_weapon" id="input_weapon">
+                <option>A heroic and classic sword</option>
                 <option>The small yet deadly knife</option>
-                <option>The ranged and skilled Bow</option>
+                <option>A ranged and skillfull Bow</option>
                 <option>The art of speech and charisma</option>
-                <option>The barbaric axe</option>
-                <option>The Samurai's katana</option>
+                <option>A barbaric axe</option>
+                <option>A Samurai's katana</option>
                 <option>The magic art of spells</option>
             </select>
         </div>
         <div class="form-group">
-            <label for="input_dropdown">What familiar do you travel with?</label>
-            <input type="text" class="form-control" name="input_dropdown" id="input_dropdown" placeholder="Tiger">
+            <label for="input_familiar">What familiar do you travel with?</label>
+            <input type="text" class="form-control" name="input_familiar" id="input_familiar" placeholder="A tiger">
         </div>
         <div class="form-group">
-          <label for="input_freeform">What adventure do you embark on?</label>
-          <textarea class="form-control" name="input_freeform" id="input_freeform" rows="3" placeholder="to find the holy grail"></textarea>
+          <label for="input_adventure">What adventure do you embark on? </label>
+          <textarea class="form-control" name="input_adventure" id="input_adventure" rows="3" placeholder="to find the holy grail"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
@@ -62,7 +62,7 @@
     <div class="container">
       {% if input_data %} {{ input_data }} {% endif %}
       <br />
-      {% if output %} {{ output }} {% endif %}
+      {% if name %} A long time ago,  {{ name }} a {{ role }} from {{ homeland }} left his home with his {{familiar}} and equipped with {{weapon}} {{adventure}}     {% endif %}
     </div>
   </body>
 </html>

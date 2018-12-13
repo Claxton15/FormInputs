@@ -23,11 +23,13 @@ def main():
 @app.route('/process_inputs', methods=['POST'])
 def process_inputs():
     name = request.form.get('input_name', '')
-    dropdown = request.form.get('input_dropdown', '')
-    select = request.form.get('input_select', '')
-    freeform = request.form.get('input_freeform', '')
+    role = request.form.get('input_role', '')
+    homeland = request.form.get('input_homeland', '')
+    weapon = request.form.get('input_weapon', '')
+    familiar = request.form.get('input_familiar', '')
+    adventure = request.form.get('input_adventure', '')
     if name is "":
          return render_template("main_page.html", input_data=dropdown,
                            output="It seem's you've forgotten to give me your name.")
     return render_template("main_page.html",
-                           output="along time ago %s, a " % name )
+                           name = name,  role = role, homeland = homeland, weapon = weapon, familiar = familiar, adventure = adventure)
