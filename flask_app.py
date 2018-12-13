@@ -28,6 +28,6 @@ def process_inputs():
     freeform = request.form.get('input_freeform', '')
     if name is "":
          return render_template("main_page.html", input_data=dropdown,
-                           output="What's the big idea? You gotta name don't you?")
-    return render_template("main_page.html", input_data=dropdown,
-                           output="You're a wizard %s." % name)
+                           output="It seem's you've forgotten to give me your name.")
+    return render_template("main_page.html",
+                           output="along time ago %s, a " % name )
